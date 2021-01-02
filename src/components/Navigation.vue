@@ -6,7 +6,6 @@
              fixed
              app>
 
-
     <v-toolbar-title class="ml-2">
       <router-link to="/">
         <span class="white--text">Jor.sh</span>
@@ -20,11 +19,12 @@
       Software
     </v-btn>
 
+    <!--
     <v-btn to="/photography" plain>
       <v-icon class="mr-1">mdi-camera</v-icon>
       Photography
     </v-btn>
-
+    -->
 
   </v-app-bar>
 </template>
