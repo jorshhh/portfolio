@@ -1,32 +1,43 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+    <page-navigation></page-navigation>
+
+    <!-- Sizes your content based upon application components -->
+    <v-main class="secondary">
+
+      <router-view></router-view>
+
+    </v-main>
+    <page-footer></page-footer>
+  </v-app>
 </template>
 
-<style>
+<script>
+
+import PageFooter from "@/components/Footer";
+import PageNavigation from "@/components/Navigation";
+
+export default {
+  name: 'App',
+  components: {PageNavigation, PageFooter},
+  data: () => ({
+    //
+  }),
+};
+</script>
+
+
+<style lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Oswald');
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Inconsolata', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
+.v-application .text-h3{
+  font-family: 'Inconsolata', sans-serif !important;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
